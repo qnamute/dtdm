@@ -1,13 +1,14 @@
 runtime: java
-env: flex
+env : flex
+inbound_services: 
+- warmup
+derived_file_type:
+- java_precompiled
+
+runtime_config: 
+  jdk: openjdk8
 
 handlers:
 - url: /.*
   script: this field is required, but ignored
-
-runtime_config:  # Optional
-  jdk: openjdk8
-  server: jetty9
-
-manual_scaling:
-  instances: 1
+skip_files: app.yaml
