@@ -4,4 +4,7 @@
   <version>1</version>
   <threadsafe>true</threadsafe>
   <runtime>java8</runtime>
+  <system-properties>
+    <property name="appengine.api.urlfetch.defaultDeadline" value="10"/>
+ </system-properties>
 </appengine-web-app>
