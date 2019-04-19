@@ -1,11 +1,13 @@
 runtime: java
 env: flex
-runtime_config:
-  jdk: openjdk8
-env_variables:
-  SPRING_PROFILES_ACTIVE: "gcp,mysql"
+
 handlers:
 - url: /.*
   script: this field is required, but ignored
-manual_scaling: 
+
+runtime_config:  # Optional
+  jdk: openjdk8
+  server: jetty9
+
+manual_scaling:
   instances: 1
